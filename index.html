@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اختبار نسبة الوعي الذاتي</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- صفحة البداية -->
+        <div id="welcome-screen" class="screen active">
+            <div class="welcome-content">
+                <h1 class="main-title">اختبار نسبة الوعي الذاتي</h1>
+                <p class="subtitle">اكتشف مستوى وعيك الذاتي من خلال 30 سؤالاً عميقاً</p>
+                <div class="intro-text">
+                    <p>هذا الاختبار يهدف إلى قياس مستوى الوعي الذاتي لديك من خلال أسئلة تتطلب تأملاً عميقاً في النفس والحياة.</p>
+                    <p>كن صادقاً مع نفسك في الإجابات للحصول على نتيجة دقيقة.</p>
+                </div>
+                <button id="start-btn" class="btn-primary">ابدأ الاختبار</button>
+            </div>
+        </div>
+
+        <!-- شاشة الأسئلة -->
+        <div id="quiz-screen" class="screen">
+            <div class="quiz-header">
+                <div class="progress-bar">
+                    <div id="progress" class="progress-fill"></div>
+                </div>
+                <div class="question-counter">
+                    <span id="current-question">1</span> من <span id="total-questions">30</span>
+                </div>
+            </div>
+            
+            <div class="question-container">
+                <h2 id="question-text" class="question-text"></h2>
+                <textarea id="answer-input" class="answer-input" placeholder="اكتب إجابتك هنا... (يفضل جملة أو جملتين)" rows="4"></textarea>
+                
+                <div class="quiz-controls">
+                    <button id="prev-btn" class="btn-secondary" disabled>السابق</button>
+                    <button id="next-btn" class="btn-primary">التالي</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- شاشة النتائج -->
+        <div id="result-screen" class="screen">
+            <div class="result-content">
+                <h1 class="result-title">نتيجة اختبار الوعي الذاتي</h1>
+                
+                <div class="score-circle">
+                    <div class="score-number" id="final-score">0%</div>
+                    <div class="score-label">نسبة الوعي الذاتي</div>
+                </div>
+                
+                <div class="result-analysis">
+                    <h3>تحليل النتيجة:</h3>
+                    <p id="result-description"></p>
+                    
+                    <div class="detailed-analysis">
+                        <h4>التفاصيل:</h4>
+                        <div class="analysis-item">
+                            <span class="analysis-label">الوعي بالذات:</span>
+                            <div class="analysis-bar">
+                                <div class="analysis-fill" id="self-awareness-bar"></div>
+                            </div>
+                            <span class="analysis-score" id="self-awareness-score">0%</span>
+                        </div>
+                        
+                        <div class="analysis-item">
+                            <span class="analysis-label">التأمل والتفكر:</span>
+                            <div class="analysis-bar">
+                                <div class="analysis-fill" id="reflection-bar"></div>
+                            </div>
+                            <span class="analysis-score" id="reflection-score">0%</span>
+                        </div>
+                        
+                        <div class="analysis-item">
+                            <span class="analysis-label">الصدق مع النفس:</span>
+                            <div class="analysis-bar">
+                                <div class="analysis-fill" id="honesty-bar"></div>
+                            </div>
+                            <span class="analysis-score" id="honesty-score">0%</span>
+                        </div>
+                        
+                        <div class="analysis-item">
+                            <span class="analysis-label">النضج العاطفي:</span>
+                            <div class="analysis-bar">
+                                <div class="analysis-fill" id="emotional-bar"></div>
+                            </div>
+                            <span class="analysis-score" id="emotional-score">0%</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="result-actions">
+                    <button id="restart-btn" class="btn-primary">إعادة الاختبار</button>
+                    <button id="share-btn" class="btn-secondary">مشاركة النتيجة</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
